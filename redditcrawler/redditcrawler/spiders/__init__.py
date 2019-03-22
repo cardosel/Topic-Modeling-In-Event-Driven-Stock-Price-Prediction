@@ -28,7 +28,12 @@ class PostSpider(scrapy.Spider):
         'wallstreetbets',
         'stocks',
         'stock_picks',
-        'stockmarket'
+        'stockmarket',
+        'stockaday',
+        'investing',
+        'robinhood',
+        'daytrading',
+        'ValueInvesting'
     ]
         
     start_urls = ['https://old.reddit.com/r/' + sub + '/new/' \
