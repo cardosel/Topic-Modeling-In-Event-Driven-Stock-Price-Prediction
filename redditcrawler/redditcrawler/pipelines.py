@@ -40,3 +40,16 @@ class MongoPipeline(object):
         self.db[self.collection_name].insert(dict(item))
         logging.debug("Post added to MongoDB")
         return item
+    
+class JsonWriterPipeline(object):
+    def open_spider(self, spider):
+        self.file = open('items.jl', 'w')
+    
+    def close_spider(self, spider):
+        self.file.close()
+    
+    def process_item(self, item, spider):
+        line = json.dumps(dict(item)) + "\n"
+        self.file.write(line)
+        print "Added Post to JSON File."
+        return item
