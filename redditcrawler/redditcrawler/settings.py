@@ -68,7 +68,8 @@ RANDOMIZE_DOWNLOAD_DELAY = True
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'redditcrawler.pipelines.MongoPipeline': 300,
+    #'redditcrawler.pipelines.MongoPipeline': 300,
+    'redditcrawler.pipelines.JsonWriterPipeline': 800,
 }
 
 ## get mongodb params (using configparser)
