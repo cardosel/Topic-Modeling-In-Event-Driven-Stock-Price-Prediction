@@ -22,6 +22,7 @@ Score: 0.0500011965632	 Topic: 0.029*"year" + 0.028*"term" + 0.023*"long" + 0.01
 Score: 0.0500009134412	 Topic: 0.025*"fuck" + 0.018*"like" + 0.018*"market" + 0.016*"think" + 0.016*"year"
 Score: 0.050000756979	 Topic: 0.052*"time" + 0.027*"strong" + 0.022*"year" + 0.013*"like" + 0.013*"close"
 Score: 0.0500007234514	 Topic: 0.029*"money" + 0.028*"short" + 0.027*"http" + 0.027*"like" + 0.024*"href"
-Score: 0.050000615418	 Topic: 0.054*"trade" + 0.041*"good" + 0.024*"bond" + 0.022*"market" + 0.021*"stock"```
+Score: 0.050000615418	 Topic: 0.054*"trade" + 0.041*"good" + 0.024*"bond" + 0.022*"market" + 0.021*"stock"
+```
 
 ### 3. Performance evaluation between Bigrams Model and LDA TF-IDF Model on comments.
