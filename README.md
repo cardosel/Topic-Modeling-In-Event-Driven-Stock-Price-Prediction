@@ -26,3 +26,78 @@ Score: 0.050000615418	 Topic: 0.054*"trade" + 0.041*"good" + 0.024*"bond" + 0.02
 ```
 
 ### 3. Performance evaluation between Bigrams Model and LDA TF-IDF Model on comments.
+#### Example: Extracting Trigrams from "Uber" Mentions
+```
+data = pd.read_csv("training-data-2019-04-11.csv")
+sell_data = data[data.comments.str.contains("Uber")]
+data = sell_data
+data_text = data[['comments']]
+data_text= data_text.drop_duplicates(subset='comments', keep="last").reset_index()
+data_text['index'] = data_text.index
+documents = data_text
+processed_documents = documents['comments'].map(tokenization)
+sentences = processed_documents
+bigrams = Phrases(sentences, min_count=2, threshold=100)
+trigrams = Phrases(bigrams[sentences], threshold=100)
+sorted(trigrams.vocab.items(), key=lambda x:x[1], reverse=True)[110:170]
+[('travel', 12),
+ ('player', 12),
+ ('data', 12),
+ ('busi_model', 12),
+ ('like_lyft', 12),
+ ('month', 12),
+ ('soon', 12),
+ ('manufactur', 12),
+ ('stop', 12),
+ ('lose_money', 12),
+ ('pinterest', 12),
+ ('uber_go', 12),
+ ('app', 12),
+ ('instead', 12),
+ ('hold', 11),
+ ('offer', 11),
+ ('uber_market', 11),
+ ('number', 11),
+ ('sell', 11),
+ ('person', 11),
+ ('us', 11),
+ ('tri', 11),
+ ('expand', 11),
+ ('away', 11),
+ ('product', 11),
+ ('drop', 11),
+ ('space', 11),
+ ('gonna', 11),
+ ('self_drive_car', 11),
+ ('interest', 11),
+ ('nofollow', 11),
+ ('scale', 11),
+ ('beat', 11),
+ ('hail', 11),
+ ('brand', 11),
+ ('risk', 11),
+ ('insur', 11),
+ ('capit', 11),
+ ('rent', 11),
+ ('rideshar', 11),
+ ('option', 11),
+ ('overvalu', 10),
+ ('think_uber', 10),
+ ('regul', 10),
+ ('take', 10),
+ ('industri', 10),
+ ('plan', 10),
+ ('worth', 10),
+ ('rais', 10),
+ ('global', 10),
+ ('yeah', 10),
+ ('area', 10),
+ ('put', 10),
+ ('save', 10),
+ ('ford', 10),
+ ('margin', 10),
+ ('file', 10),
+ ('wouldn', 10),
+ ('bought', 10),
+ ('second', 9)]
+ ```
