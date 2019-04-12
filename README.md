@@ -102,4 +102,4 @@ sorted(trigrams.vocab.items(), key=lambda x:x[1], reverse=True)[110:170]
  ('second', 9)]
  ```
 
-### 4. Create Document Feature Matrix from N-Grams Model after applying LDA for dimensionality reduction as input to CNN.
+### 4. Create Document Feature Matrix from N-Grams Model after applying LDA for dimensionality reduction as input to            CNN.
