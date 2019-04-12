@@ -107,11 +107,11 @@ sorted(trigrams.vocab.items(), key=lambda x:x[1], reverse=True)[110:170]
 
 
 
-Supporting Sources:
+### Supporting Sources:
 Topic Modeling based Sentiment Analysis on Social Media
 for Stock Market Prediction: https://www.aclweb.org/anthology/P15-1131
 
-Stock Market Prediction with Deep Learning: A Character-based Neural Language Model for Event-based Trading:
+Stock Market Prediction with Deep Learning: A Character-based Neural Language Model for Event-based Trading
 https://aclweb.org/anthology/U17-1001
 
 Sentiment analysis of Twitter data for predicting stock market movements
